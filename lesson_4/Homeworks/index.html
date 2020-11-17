@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home_work_lesson-4</title>
+</head>
+<body>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		input {
+			padding: 5px;
+			outline: none;
+			margin-bottom: 5px;
+		}
+		input:valid {
+			border: 1px solid green;
+		}
+		input:invalid {
+			border: 1px solid red;
+		}
+		body {
+			display: flex;
+		}
+		.Form{
+			margin: 50px auto 0 auto;
+			display: flex;
+			flex-direction: column;
+		}
+		span {
+			display: block;
+		}
+	</style>
+	<form name="my-form" action="" method="_POST" class="Form">
+		<label>
+			<span class="Login__text-node">Логин:</span>
+			<input class="Login" type="text" name="login" minlength = '2' required/>
+		</label>
+		<label>
+			<span class="Email__text-node">Имейл:</span>
+			<input class="Email" type="email" name="your_email" minlength = '3' validEmail>
+		</label>
+		<label>
+			<span class="Pass__text-node">Пароль:</span>
+			<input class="Pass" type="password" name="pass" minlength="8" maxlength="16" required="">
+		</label>
+		<label>
+			<span class="Apple__text-node">Количество сьеденых яблок:</span>
+			<input class="Apple" type="number" name="appleCount" minlength="1" validNumber>
+		</label>
+		<label>
+			<span class="Thanks__text-node">Напиши спасибо за яблоки:</span>
+			<input class="Thanks" type="text" name="thanks" required>
+		</label>
+		<label>
+			<span class="Check__text-node">Согласен на обучение:</span>
+			<input class="Check" type="checkbox" name="check" required>
+		</label>
+		<label>
+			<input id="Go" type="submit" name="go" value="go">
+			<button id="validate" type="submit">Validate</button>
+		</label>
+	</form>
+	<script type="text/javascript" src="Task1.js"></script>	
+</body>
+</html>
